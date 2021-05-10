@@ -1,6 +1,6 @@
 # PHP P8
 
-Pour tester, lancer dans un terminal depuis la racin du projet :
+Pour tester, lancer dans un terminal depuis la racine du projet :
 
     php -S localhost:8000 -t public/
 
