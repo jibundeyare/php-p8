@@ -1,5 +1,12 @@
 # PHP P8
 
+Ce repo contient le code écrit pendant le cours de PHP.
+
+## Prérequis
+
+- PHP 7+
+- composer
+
 ## Installation
 
     git clone https://github.com/jibundeyare/php-p8
