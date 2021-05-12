@@ -2,11 +2,14 @@
 
 declare(strict_types = 1);
 
+namespace App;
+
 class Lib
 {
     /**
      * Cette fonction additionne deux nombres
      * 
+     * @throws \Exception une exception est générée si un des paramètres est inférieur à zéro
      * @param float $a ce paramètre doit être supérieur ou égal à zéro 
      * @param float $b ce paramètre doit être supérieur ou égal à zéro
      * @return float le résultat de l'addition
@@ -17,11 +20,11 @@ class Lib
         if ($a < 0) {
             // le paramètre $a est inférieur à zéro
             // on génère une exception
-            throw new Exception("le paramètre \$a a une valeur négative $a");
+            throw new \Exception("le paramètre \$a a une valeur négative $a");
         } elseif ($b < 0) {
             // le paramètre $b est inférieur à zéro
             // on génère une exception
-            throw new Exception("le paramètre \$b a une valeur négative $b");
+            throw new \Exception("le paramètre \$b a une valeur négative $b");
         }
 
         return $a + $b;

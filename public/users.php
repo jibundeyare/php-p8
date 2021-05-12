@@ -1,5 +1,7 @@
 <?php
 
+use App\Model\User;
+
 // include / require
 require __DIR__.'/../vendor/autoload.php';
 

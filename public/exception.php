@@ -1,5 +1,7 @@
 <?php
 
+use App\Lib;
+
 require __DIR__.'/../vendor/autoload.php';
 
 // appel de la fonction statique sum() avec des valeurs positives
@@ -10,14 +12,20 @@ try {
     $result2 = Lib::sum(3.14, -2.71);
 } catch (Exception $e) {
     // affichage des infirmations de l'exception
+    echo $e->getMessage().'<br>';
     echo $e->getFile().'<br>';
     echo $e->getLine().'<br>';
-    echo $e->getMessage().'<br>';
+    echo $e->getTraceAsString().'<br>';
+
+    // les options possibles :
+    // - stoper le programme
+    // - rediriger l'utilisateur vers une page erreur 500
+    // - continuer
 } finally {
     // on initialise la variable $result2 à 0 si elle n'a pas été initialisée
     if (!isset($result2)) {
         // la variable n'a pas été initialisée
-        $result2 = 0;
+        $result2 = null;
     }
 }
 
